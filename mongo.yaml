@@ -9,6 +9,7 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD="password"
   mongo-express:
     image: mongo-express
+    restart: always
     ports:
       - 8080:8081
     environment:
