@@ -7,6 +7,9 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME="mongoadmin"
       - MONGO_INITDB_ROOT_PASSWORD="password"
+    networks:
+      - mongo-network
+  
   mongo-express:
     image: mongo-express
     restart: always
@@ -19,3 +22,9 @@ services:
       - ME_CONFIG_BASICAUTH_PASSWORD="password"
       - ME_CONFIG_MONGODB_SERVER=mongodb
       - ME_CONFIG_MONGODB_PORT=27017
+    networks:
+      - mongo-network
+
+networks:
+  mongo-network:
+    driver: bridge
