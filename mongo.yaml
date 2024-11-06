@@ -18,3 +18,4 @@ services:
       - ME_CONFIG_BASICAUTH_USERNAME="mongoadmin"
       - ME_CONFIG_BASICAUTH_PASSWORD="password"
       - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_PORT=27017
