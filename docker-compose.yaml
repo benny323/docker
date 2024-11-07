@@ -1,7 +1,7 @@
 version: '3'
 services:
   my-app:
-    image: 4375c80f4394b36f072c5aa9eb6d06642dd69b6fada6daba7f918ec73641bb15
+    image: registry-intl.ap-southeast-3.aliyuncs.com/jump1/tess123:1.1
     ports:
       - 3000:3000
   mongodb:
