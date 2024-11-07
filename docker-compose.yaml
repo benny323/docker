@@ -11,7 +11,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
-
+    volumes:
+      - mongo-data:/data/db
   mongo-express:
     image: mongo-express
     restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
@@ -24,3 +25,6 @@ services:
       - ME_CONFIG_MONGODB_PORT=27017
       - ME_CONFIG_BASICAUTH_USERNAME=admin
       - ME_CONFIG_BASICAUTH_PASSWORD=password
+volumes:
+  mongo-data:
+    driver: local
