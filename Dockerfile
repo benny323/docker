@@ -3,8 +3,8 @@ FROM node:23-alpine
 ENV MONGO_DB_USERNAME=admin \
     MONGO_DB_PWD=password
 
-RUN mkdir -p /home/app
+RUN mkdir -p /home/node-app
 
-COPY ./app /home/app
+COPY ./app /home/node-app
 
-CMD ["node","/home/app/server.js"]
+CMD ["node","/home/node-app/server.js"]
